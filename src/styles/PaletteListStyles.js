@@ -19,7 +19,7 @@ export default {
     backgroundColor: "#394bad",
     /* background by SVGBackgrounds.com */
     backgroundImage: `url(${bg})`,
-    overflow: "scroll"
+    overflowY: "scroll"
   },
   heading: {
     fontSize: "2rem"
@@ -47,9 +47,19 @@ export default {
       color: "white"
     }
   },
+  button: {
+    margin: "0 0.5rem",
+    [sizes.down("xs")]: {
+      margin: "0"
+    }
+  },
+  link: {
+    textDecoration: "none"
+  },
   palettes: {
     boxSizing: "border-box",
     width: "100%",
+    marginBottom: "3rem",
     display: "grid",
     gridTemplateColumns: "repeat(3, 30%)",
     gridGap: "2.5rem",

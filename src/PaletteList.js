@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
+import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
@@ -53,8 +54,16 @@ class PaletteList extends Component {
       <div className={classes.root}>
         <div className={classes.container}>
           <nav className={classes.nav}>
-            <h1 className={classes.heading}>React Colors</h1>
-            <Link to="/palette/new">Create Palette</Link>
+            <h1 className={classes.heading}>The React Palette</h1>
+            <Link to="/palette/new" className={classes.link}>
+              <Button
+                variant="contained"
+                color="secondary"
+                className={classes.button}
+              >
+                Create Palette
+              </Button>
+            </Link>
           </nav>
           <TransitionGroup className={classes.palettes}>
             {palettes.map(palette => (
